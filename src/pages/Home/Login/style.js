@@ -12,11 +12,11 @@ export const styleSheet = {
         display: "flex",
         flexWrap: "wrap",
         flexDirection: "column",
-        height: "50%",
+        height: "60%",
         width: "30%",
         alignItems: "center",
         justifyContent: "center",
-        border: "black solid"
+        backgroundColor:"rgb(197, 181, 181)"
     },
     title_container:{
         display: "flex",
@@ -27,9 +27,9 @@ export const styleSheet = {
     form_container:{
         display: "flex",
         flexDirection:"column",
-        justifyContent:"space-around",
+        justifyContent:"space-evenly",
         alignItems: "center",
-        height: "50%"
+        height: "50%",
     },
     btn_container:{
         display: "flex",
@@ -40,8 +40,9 @@ export const styleSheet = {
     register_container:{
         display: "flex",
         alignItems: "center",
+        justifyContent:"center",
         height: "10%",
         width:'100%',
-        backgroundColor: "green"
+
     }
 }

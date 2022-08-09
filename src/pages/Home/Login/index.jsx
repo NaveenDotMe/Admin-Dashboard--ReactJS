@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import GDSEButton from "../../../components/common/button";
 import GDSESnackBar from "../../../components/common/snackBar";
+import {Link} from "react-router-dom";
 
 class Login extends Component {
     constructor(props) {
@@ -17,9 +18,9 @@ class Login extends Component {
                 password: ""
             },
             //SnackBar
-            open : false,
-            massage : "",
-            severity : ""
+            open: false,
+            massage: "",
+            severity: ""
         }
     }
 
@@ -61,7 +62,8 @@ class Login extends Component {
                         <TextField
                             id="outlined-basic"
                             label="User Name"
-                            variant="outlined"
+                            variant="filled"
+                            style={{width:"100%"}}
                             onChange={(e) => {
                                 console.log(e.target.value)
                                 let formData = this.state.formData //assigning formData Object to new formData variable
@@ -73,7 +75,8 @@ class Login extends Component {
                             id="outlined-basic"
                             type="password"
                             label="Password"
-                            variant="outlined"
+                            variant="filled"
+                            style={{width:"100%"}}
                             onChange={(e) => {
                                 console.log(e.target.value)
                                 let formData = this.state.formData
@@ -91,6 +94,16 @@ class Login extends Component {
                             }}
                         />
                     </div>
+                    <div className={classes.register_container}>
+                        <Typography variant="h8" gutterBottom component="div">
+                            Create new User Account?
+                        </Typography>
+                        <Link to="user">
+                            <Typography variant="h8" gutterBottom component="div">
+                                Click Here
+                            </Typography>
+                        </Link>
+                    </div>
                 </div>
                 <GDSESnackBar
                     open={this.state.open}
@@ -105,7 +118,6 @@ class Login extends Component {
             </div>
         )
     }
-
 }
 
 export default withStyles(styleSheet)(Login)
